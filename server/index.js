@@ -11,7 +11,7 @@ import cloudinary from "cloudinary";
 import courseRoute from "./routes/course.route.js";
 import paymentRoute from "./routes/payment.route.js";
 import Razorpay from "razorpay";
-import stateRoute from './routes/state.route.js'
+import stateRoute from "./routes/state.route.js";
 
 const app = express();
 
@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://lmsbyabhi.onrender.com/",
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -37,13 +37,12 @@ cloudinary.v2.config({
 export const razorpay = new Razorpay({
   key_id: process.env.RAZORPAY_KEY_ID,
   key_secret: process.env.RAZORPAY_KEY_SECRET,
-
 });
 
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/courses", courseRoute);
 app.use("/api/v1/payments", paymentRoute);
-app.use("/api/v1",stateRoute)
+app.use("/api/v1", stateRoute);
 
 app.use((req, res, next) => {
   return next(new AppError("Page not found", 404));
