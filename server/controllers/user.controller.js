@@ -3,13 +3,13 @@ import AppError from "../utils/error.util.js";
 import cloudinary from "cloudinary";
 import fs from "fs/promises";
 import crypto from "crypto";
-import bcrypt from "bcryptjs";
 import sendMail from "../utils/sendEmail.js";
 
 const cookieOptions = {
   maxAge: 7 * 24 * 60 * 60 * 1000,
   httpOnly: true,
   secure: true,
+  sameSite: "None",
 };
 
 const register = async (req, res, next) => {
