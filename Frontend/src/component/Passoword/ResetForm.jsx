@@ -48,7 +48,7 @@ const ResetForm = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-semibold py-2.5 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105"
+            className="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-yellow-600 hover:to-orange-600 text-white font-semibold py-2.5 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105"
           >
             Reset Password
           </button>

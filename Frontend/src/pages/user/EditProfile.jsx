@@ -95,6 +95,7 @@ function EditProfile() {
               type="text"
               name="username"
               id="username"
+              autoComplete="username"
               placeholder="Enter your name"
               className="bg-transparent px-2 py-1 border"
               value={data.username}

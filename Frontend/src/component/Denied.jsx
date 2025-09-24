@@ -8,7 +8,7 @@ const Denied = () => {
 
       <div className="text-9xl font-extrabold tracking-widest ">403</div>
       <h1 className="text-2xl">Authorized Access</h1>
-      <button onClick={() => navigate(-1)} className="px-5 mt-5 py-3 font-light border-1 bg-transparent border-blue-400 hover:bg-amber-300 text-xl rounded-sm ease-in-out duration-200 cursor-pointer "><span>←</span>&nbsp;Go Back</button>
+      <button onClick={() => navigate(-1)} className="px-5 mt-5 py-3  bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 font-light border-1 bg-transparent border-blue-400 hover:bg-amber-300 text-xl rounded-sm ease-in-out duration-200 cursor-pointer "><span>←</span>&nbsp;Go Back</button>
 
 
     </div>

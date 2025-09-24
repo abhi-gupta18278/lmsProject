@@ -83,6 +83,7 @@ function AddLecture() {
                         <input
                             type="text"
                             name="title"
+                            autoComplete="username"
                             placeholder="Lecture Title"
                             onChange={handleInputChange}
                             value={userInput.title}

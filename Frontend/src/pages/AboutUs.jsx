@@ -32,7 +32,7 @@ const AboutUs = () => {
             />
           </div>
         </div>
-        <div className="carousel w-1/2 m-auto my-16">
+        <div className="carousel w-full  md:w-1/2 auto my-16">
           {celebrities && celebrities.map(celebrity => (<CarouselSlide
             {...celebrity}
             key={celebrity.slideNumber}
