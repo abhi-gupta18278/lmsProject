@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import HomeLayout from "../../Layouts/HomeLayout";
-import { addCourseLecture } from "../../Redux/Slices/LectureSlice.js";
+import { addCourseLecture } from "../../Redux/Slices/lectureSlice.js";
 
 function AddLecture() {
 
