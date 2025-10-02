@@ -1,3 +1,4 @@
+import User from "../models/userSchema.js";
 import AppError from "../utils/error.util.js";
 import jwt from "jsonwebtoken";
 const isLoggedIn = async (req, res, next) => {
@@ -30,8 +31,9 @@ const authorizeRoles =
   };
 
 const authorizeSubscriber = async (req, res, next) => {
-  const subscription = req.user.subscription;
-  const currentUserRole = req.user.role;
+  const user = await User.findById(req.user.id)
+  const subscription = user.subscription;
+  const currentUserRole = user.role;
   if (currentUserRole !== "admin" && subscription.status !== "active") {
     return next(
       new AppError(`You are not allowed to access this resource`, 403)
